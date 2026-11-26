@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Riacho</title>
+<title>Riacho · una lancha de noche por el Delta | Kvothesson</title>
 <meta name="description" content="Una lancha de noche por el Delta del Paraná: prendé seis faroles hasta la torre del Nodo sin que te alcance la luz mala. Todo hecho con código.">
 <meta property="og:title" content="Riacho">
 <meta property="og:description" content="Una lancha de noche por el Delta. Seis faroles, una torre y la luz mala. Unos dos minutos, todo con código.">
@@ -11,6 +11,14 @@
 <meta property="og:url" content="https://kvothesson.com/riacho/">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://kvothesson.com/riacho/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta property="og:site_name" content="Kvothesson">
+<meta name="twitter:title" content="Riacho">
+<meta name="twitter:description" content="Una lancha de noche por el Delta del Paraná: prendé seis faroles hasta la torre sin que la luz mala te deje a oscuras. Gratis en el navegador.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"VideoGame","name":"Riacho","description":"Juego corto de navegador: una lancha de noche por el Delta del Paraná. Prendé seis faroles hasta la torre del Nodo sin que la luz mala te deje sin linterna. Hecho todo con código por Kvothesson, parte del Universo Austral.","url":"https://kvothesson.com/riacho/","image":"https://kvothesson.com/riacho/cuadros/2.png","inLanguage":"es","genre":["Aventura","Exploración","Terror atmosférico"],"gamePlatform":"Web browser","applicationCategory":"Game","operatingSystem":"Any","isAccessibleForFree":true,"offers":{"@type":"Offer","price":0,"priceCurrency":"USD"},"author":{"@type":"Organization","name":"Kvothesson","url":"https://kvothesson.com/"}}
+</script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23020208'/%3E%3Crect x='7' y='3' width='2' height='10' fill='%23514a63'/%3E%3Crect x='6' y='2' width='4' height='3' fill='%23ffc873'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,6 +46,8 @@ canvas{display:block;width:100vw;height:100vh;image-rendering:pixelated}
 #title.fin .fin-only{display:block} #title.fin .intro-only{display:none}
 @keyframes pulse{50%{opacity:.35}}
 #load{position:fixed;inset:0;display:grid;place-content:center;font-family:Fraunces,serif;font-style:italic;font-weight:300;font-size:18px;color:var(--dim);background:#020208;transition:opacity 1.5s}
+#load .sobre{max-width:min(86vw,560px);margin:22px auto 0;font-family:Inter,system-ui,sans-serif;font-style:normal;font-size:14px;line-height:1.6;color:var(--dim);text-align:left}
+#load .sobre a{color:var(--gold)}
 #load.off{opacity:0;pointer-events:none}
 #home{position:fixed;left:24px;bottom:20px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);text-decoration:none;opacity:0;transition:opacity 1.5s;pointer-events:none}
 [data-mode=intro] #home,[data-mode=final] #home{opacity:.75;pointer-events:auto}
@@ -60,7 +70,12 @@ canvas{display:block;width:100vw;height:100vh;image-rendering:pixelated}
 </div>
 <div id="mute">sonido: sí (M)</div>
 <a id="home" href="https://kvothesson.com/">kvothesson.com</a>
-<div id="load">Encendiendo el riacho…</div>
+<div id="load"><div>Encendiendo el riacho…</div>
+<div class="sobre">
+<p><strong>Riacho</strong> es un juego corto y gratis que se juega en el navegador. Manejás una lancha de noche por el Delta del Paraná, la noche del apagón, y tenés que prender seis faroles a lo largo del riacho hasta llegar a la torre del Nodo.</p>
+<p>Se juega con WASD o las flechas: adelante, atrás y doblar. Quedate al lado de cada farol hasta que prenda. La luz mala, una luz verde que anda entre los juncos, te va gastando la linterna si se te acerca; al lado de un farol prendido se recupera. Si te quedás a oscuras volvés al último farol. M prende o apaga el sonido y R vuelve a empezar al final. Dura unos dos minutos.</p>
+<p>Está hecho todo con código, sin modelos ni sonidos grabados. Es parte de <a href="https://kvothesson.com/">Kvothesson</a> y del Universo Austral.</p>
+</div></div>
 <div id="err"></div>
 <script type="module">
 const Q = new URLSearchParams(location.search);
